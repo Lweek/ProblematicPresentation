@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProblematicPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3a-Bj-1Cd">
+                                <rect key="frame" x="258" y="285" width="85" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Open Dialog"/>
+                                <connections>
+                                    <action selector="openButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZET-hu-85s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k3a-Bj-1Cd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IfR-H8-azk"/>
+                            <constraint firstItem="k3a-Bj-1Cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ltc-9u-seA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Ry3-VT-Rrz" kind="presentation" identifier="openDetail" id="BgY-n6-mON"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Dialog View Controller-->
+        <scene sceneID="gBY-WS-fc5">
+            <objects>
+                <viewController id="Ry3-VT-Rrz" customClass="DialogViewController" customModule="ProblematicPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0qH-R2-2WC"/>
+                        <viewControllerLayoutGuide type="bottom" id="g73-1u-dtb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X96-CJ-qV8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0L8-Oe-7mZ">
+                                <rect key="frame" x="252" y="285" width="96" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Open Content"/>
+                                <connections>
+                                    <segue destination="U0C-6Z-jEm" kind="showDetail" identifier="showContent" id="zWf-Gw-oSf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.87450980389999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0L8-Oe-7mZ" firstAttribute="centerY" secondItem="X96-CJ-qV8" secondAttribute="centerY" id="N27-RK-QMa"/>
+                            <constraint firstItem="0L8-Oe-7mZ" firstAttribute="centerX" secondItem="X96-CJ-qV8" secondAttribute="centerX" id="iuf-pJ-83a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5r-aV-1Ju" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="368"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="0NU-pK-Jfb">
+            <objects>
+                <viewController id="U0C-6Z-jEm" customClass="ContentViewController" customModule="ProblematicPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yos-0a-eRX"/>
+                        <viewControllerLayoutGuide type="bottom" id="oft-Sj-AT0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k44-pr-f3q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7V-JO-9em">
+                                <rect key="frame" x="252" y="285" width="96" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Close content">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="U0C-6Z-jEm" eventType="touchUpInside" id="wLG-fr-Ueb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.36078431370000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F7V-JO-9em" firstAttribute="centerX" secondItem="k44-pr-f3q" secondAttribute="centerX" id="erQ-6n-teS"/>
+                            <constraint firstItem="F7V-JO-9em" firstAttribute="centerY" secondItem="k44-pr-f3q" secondAttribute="centerY" id="iFy-ua-zjV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0KC-Yg-Gbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1856" y="368"/>
+        </scene>
+    </scenes>
+</document>
